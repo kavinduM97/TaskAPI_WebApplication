@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskAPI.Models\TaskAPI.Models.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
 using System.Collections.Generic;
+using TaskAPI.Services;
 using WebApplication1.Services;
 
 namespace WebApplication1.Controllers
@@ -11,10 +11,10 @@ namespace WebApplication1.Controllers
     public class TodosController : ControllerBase
 
     {
-        private TodoServices _todoServices;
+        private ITodoRepository _todoServices;
 
-        public TodosController() {
-            _todoServices =new TodoServices();
+        public TodosController(ITodoRepository repository) {
+            _todoServices = repository;
         }
         [HttpGet("{id?}")]
 
